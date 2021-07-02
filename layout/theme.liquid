@@ -8,10 +8,6 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
-    {%- unless settings.type_header_font.system? -%}
-      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
-    {%- endunless -%}
-
     <title>{{ shop.name }}</title>
 
     {% if page_description %}
@@ -24,6 +20,8 @@
     {{ content_for_header }}
 
     <!-- {{ 'base.css' | asset_url | stylesheet_tag }} -->
+    <script src="https://kit.fontawesome.com/519b7a3000.js" crossorigin="anonymous"></script>
+    {{ 'styles.css' | asset_url | stylesheet_tag }}
 
   </head>
 
