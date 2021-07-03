@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body{
+    font-family: var(--font-body);
+    font-size: 14px;
+}
+h1{
+    font-size: 1.75em;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.25em;
+}
+/* common styles */
+.container{
+    max-width: 1184px;
+    width: 100%;
+}
+/* header styling */
+.header{
+    width: 100%;
+}
+.header__first_row{
+    width: 100%;
+    background-color: var(--main-color, blue);
+}
