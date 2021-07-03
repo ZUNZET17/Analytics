@@ -1,6 +1,6 @@
 <div class="header__first-row">
-  <div class="container --dflex-row">
-      <div class="brand --dflex-row">
+  <div class="container">
+      <div class="brand">
           <div class="brand__logo">
             <svg width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M54.7625 13.0592C49.3571 5.1733 40.2827 0 30 0C13.4315 0 0 13.4314 0 30C0 32.4105 0.2843 34.7545 0.821171 37.0005L16.0983 21.7233C17.5628 20.2589 19.9372 20.2589 21.4017 21.7233L33.75 34.0717L54.7625 13.0592Z" fill="#EF2A82"/>
@@ -21,22 +21,27 @@
               </svg>              
             </div>
       </div>
-      <form class='search-field' action="{{ routes.search_url }}">
-        <label for="search-input" ></label>        
-        <input id="search-input" class='search-field__input' type="text"
-          placeholder="¿Que buscas?"
-          name="q"
-          value="{{ search.terms | escape }}"
-        >
-        <div class="search-field__btn">
-          <input class='search-field__btn' type="submit" value="">
-          <i class="fas fa-search"></i>
-        </div>
-      </form>
-      <div class='right-blocks --dflex-row'>
+      <div class ='search-field'>
+        <form class='search-form' action="{{ routes.search_url }}">
+          <label for="search-input" ></label>        
+          <input id="search-input" class='search-form__input' type="text"
+            placeholder="¿Que buscas?"
+            name="q"
+            value="{{ search.terms | escape }}"
+          >
+          <div class="search-form__btn">
+            <input class='search-form__btn' type="submit" value="">
+            <i class="fas fa-search"></i>
+          </div>
+        </form>
+      </div>  
+      <div class='right-blocks'>
         <div class="block">
           <div class='block__heading'>
-            <i class="fas fa-map-marker-alt"></i>
+            <svg class='icon' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 5.02944 7.02944 1 12 1C16.9706 1 21 5.02944 21 10V10Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>              
             <span class='text'>
               <strong>Todas</strong>
             </span>
@@ -44,18 +49,28 @@
           <div class="block__subheading">
             Seleccionar tienda
           </div>
+        </div>
+        <div class="divider">
+          <svg width="2" height="42" viewBox="0 0 2 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1V41" stroke="#A6A6A6" stroke-linecap="round"/>
+          </svg>            
         </div>   
         <div class="block">
           <div class='block__heading'>
-            <div class="user-icon">UN</div>
+            <div class="user-icon icon">JT</div>
             <span class='text'>
-              <strong>User Name</strong>
+              <strong>JhonTa</strong>
             </span>
           </div>
           <div class="block__subheading">
             Ir a mi cuenta
           </div>
         </div>
+        <div class="divider">
+          <svg width="2" height="42" viewBox="0 0 2 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1V41" stroke="#A6A6A6" stroke-linecap="round"/>
+          </svg>            
+        </div>         
         <div class="whislist-btn">
           <a href="">
             <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,6 +78,11 @@
             </svg>              
           </a>
         </div>
+        <div class="divider">
+          <svg width="2" height="42" viewBox="0 0 2 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1V41" stroke="#A6A6A6" stroke-linecap="round"/>
+          </svg>            
+        </div>         
         <div class="shopping-cart">
           <a href="">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,11 +97,17 @@
 </div> 
 <div class="header__second-row">
   <div class="container">
-    <ul class="header__menu --dflex-row">
+    <ul class="header__menu">
       {% for link in section.settings.menu.links%}
       <li><a href="{{link.url | url}}">{{link.title | escape}}</a></li>
       {% endfor %}
     </ul>
+    <div class='authentication'>
+      <a href="">
+        <span class="sign-in">Sign In</span>
+      </a>   
+      <button class="header__sign-up-btn">Sign Out</button>
+    </div>
   </div>
 </div>
 {% schema %}
