@@ -97,19 +97,33 @@
 </div> 
 <div class="header__second-row">
   <div class="container">
-    <ul class="header__menu">
-      {% for link in section.settings.menu.links%}
-      <li><a href="{{link.url | url}}">{{link.title | escape}}</a></li>
-      {% endfor %}
-    </ul>
+    <div class='menu-container'>
+      <div id="menu-toggle">
+        <i class="fas fa-bars"></i><span>MENU</span>
+      </div>
+      <ul id='menu' class="header__menu">
+        {% for link in section.settings.menu.links%}
+        <li><a href="{{link.url | url}}">{{link.title | escape}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
     <div class='authentication'>
-      <a href="">
-        <span class="sign-in">Sign In</span>
+      <a href="" class="header__sign-up-btn">
+        <span >{%if customer%}Sign Out{%else%}Sign Out{%endif%}</span>
       </a>   
-      <button class="header__sign-up-btn">Sign Out</button>
     </div>
   </div>
 </div>
+
+<script>
+$(document).ready(function(){
+    $('#menu-toggle').click(function(){
+      
+      $('#menu').toggleClass('active-menu');
+      console.log('test123321')
+  })
+})
+</script>
 {% schema %}
 {
   "name": "t:sections.header.name",
