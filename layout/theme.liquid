@@ -7,6 +7,9 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ 'slick-theme.css' | asset_url }}"/>
     
     {%- unless settings.type_header_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
@@ -74,8 +77,15 @@
         unavailable: `{{ 'products.product.unavailable' | t }}`,
       }
     </script>
-
+    
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
     <script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'variants.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'variants.js' | asset_url }}" defer="defer"></script>    
+    <script>
+      $(document).ready(function(){
+        $('.banner-slider').slick();
+      });
+    </script>
   </body>
 </html>

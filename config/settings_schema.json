@@ -17,7 +17,7 @@
       {
         "type": "color",
         "id": "main_color",
-        "default": "#0088F0",
+        "default": "#0b57a2",
         "label": "main color",
         "info": "Colors for header"
       },

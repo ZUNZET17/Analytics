@@ -1,0 +1,128 @@
+<div id="banner-products" class='container'> 
+  <div class="banner-slider">
+    {% assign collection = section.settings.slider-collection %}
+      {%- for product in collection.products -%}
+      <div class="slider-img">
+        <a href="{{product.url}}">
+        {{ product | img_url: 'medium' | img_tag}}
+        </a>
+      </div>
+      {%- endfor -%}
+  </div>
+  <div class="featured-collection">
+    {% assign collection = section.settings.featured-collection %}
+    {% for product in collection.products %}
+    <div class="product-card-container">
+      <div class='product-card'>
+        <a class='product-card__img'href="{{product.url}}">
+          {{ product | img_url: 'medium' | img_tag}}
+        </a>
+        <div class="product-card__info">
+          <div class="info__category">
+            asda
+          </div>
+          <div class="info__title">
+            {{ product.title | escape }}
+          </div>
+          <div class="info__price">
+            {{ product.price | money_without_trailing_zeros }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Banner-with-products",
+  "tag": "section",
+  "class": "spaced-section banner-products-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Featured collection",
+      "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "collection",
+      "id": "slider-collection",
+      "label": "Collection products for slider"
+    },
+    {
+      "type": "collection",
+      "id": "featured-collection",
+      "label": "Featured collection"
+    },    
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 12,
+      "step": 2,
+      "default": 4,
+      "label": "t:sections.featured-collection.settings.products_to_show.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "default": true,
+      "label": "t:sections.featured-collection.settings.show_view_all.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.swipe_on_mobile.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-collection.settings.header.content"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.featured-collection.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.featured-collection.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.featured-collection.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.featured-collection.settings.image_ratio.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_image_padding",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.add_image_padding.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.show_vendor.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner-with-products"
+    }
+  ]
+}
+{% endschema %}
