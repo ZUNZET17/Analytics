@@ -1,0 +1,71 @@
+<div class="categories-section side-pads">
+    <div class='container'>  
+        <h2 class="section-title">
+            {{ section.settings.section-title }}
+        </h2>
+        <div class="categories-slider">
+            {% for block in section.blocks %}
+            <div class="category-card">
+                <a href="{{ block.settings.category-url }}">
+                <div class="category-card__img">
+                    {{ block.settings.category-img | img_url: 'medium' | img_tag}}
+                </div>       
+                <div class='category-card__title' >
+                    <span>{{ block.settings.category-title }}</span>
+                </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Categories",
+  "tag": "section",
+  "class": "spaced-section",
+  "max_blocks": 8,
+  "settings": [ 
+    {
+      "type": "text",
+      "id": "section-title",
+      "label": "section title",
+      "default": "categorías para ti"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category-card",
+      "name": "category-card",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Category"
+        },      
+        {
+          "id": "category-link",
+          "type": "url",
+       	  "label": "Category link"
+        },
+        {
+            "id": "category-img",
+            "type": "image_picker",            
+            "label": "category img"
+        },
+        {
+            "id": "category-title",
+            "type": "text",
+            "label": "Category title"
+        }
+      ]
+    }
+  ],  
+  "presets": [
+    {
+      "name": "Categories"
+    }
+  ]
+}
+{% endschema %}

@@ -5,7 +5,7 @@
         {%- for product in collection.products -%}
         <div class="slider-img">
           <a href="{{product.url}}">
-          {{ product | img_url: 'medium' | img_tag}}
+          {{ product | img_url: 'master' | img_tag}}
           </a>
         </div>
         {%- endfor -%}

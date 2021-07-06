@@ -304,6 +304,34 @@ h3{
     color: #363535;
 }
 
+/* Categories section styling */
+
+.categories-section{
+    padding-top: 40px;
+}
+.categories-slider{
+    padding-top: 20px;
+}
+.category-card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 318px;
+    height: 206px;
+}
+.category-card__img img{
+    width: 318px;
+    height: 154px;
+    object-fit: cover;
+    object-position: center;
+}
+.category-card__title{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 12px;
+    height: max-content;
+}
+
 /* Media querys */
 @media screen and (min-width: 541px){
     .side-pads{
