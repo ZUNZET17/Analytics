@@ -5,15 +5,18 @@
         </h2>
         <div class="categories-slider">
             {% for block in section.blocks %}
-            <div class="category-card">
-                <a href="{{ block.settings.category-url }}">
-                <div class="category-card__img">
-                    {{ block.settings.category-img | img_url: 'medium' | img_tag}}
-                </div>       
-                <div class='category-card__title' >
-                    <span>{{ block.settings.category-title }}</span>
+            <div class="category-card-container">
+                <div class="category-card">
+                    <a href="{{ block.settings.category-url }}">
+                    <div class="category-card__img">
+                        {{ block.settings.category-img | img_url: 'medium' | img_tag}}
+                    </div>       
+                    <div class='category-card__title' >
+                        <span>{{ block.settings.category-title }}</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    </a>
                 </div>
-                </a>
             </div>
             {% endfor %}
         </div>
