@@ -3,35 +3,88 @@
     "banner_products": {
       "type": "banner-with-products",
       "blocks": {
-        "featured-product": {
-          "type": "featured-product"
+        "7bc3693c-77dd-4314-87de-bb0e31adbff0": {
+          "type": "featured-product",
+          "settings": {
+            "featured_product": "purple-shadow"
+          }
+        },
+        "1b2bef5a-e2d5-4d20-87c3-163a6b36279a": {
+          "type": "featured-product",
+          "settings": {
+            "featured_product": "purple-sky"
+          }
+        },
+        "9b456d4b-af8c-4100-95f2-a38703194eff": {
+          "type": "featured-product",
+          "settings": {
+            "featured_product": "red-field"
+          }
+        },
+        "2d44cb53-b35b-4c9e-b538-daa390230cc8": {
+          "type": "featured-product",
+          "settings": {
+            "featured_product": "red-wind"
+          }
         }
+      },
+      "block_order": [
+        "7bc3693c-77dd-4314-87de-bb0e31adbff0",
+        "1b2bef5a-e2d5-4d20-87c3-163a6b36279a",
+        "9b456d4b-af8c-4100-95f2-a38703194eff",
+        "2d44cb53-b35b-4c9e-b538-daa390230cc8"
+      ],
+      "settings": {
+        "slider-collection": "skin-care"
       }
     },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products"
+        "title": "Featured products",
+        "collection": "",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_vendor": false
       }
     },
     "image_text": {
       "type": "image-with-text",
       "blocks": {
         "heading": {
-          "type": "heading"
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text"
+          }
         },
         "text": {
-          "type": "text"
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
         },
         "button": {
-          "type": "button"
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
         "heading",
         "text",
         "button"
-      ]
+      ],
+      "settings": {
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "image_first"
+      }
     }
   },
   "order": [
