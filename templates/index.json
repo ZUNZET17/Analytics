@@ -1,27 +1,12 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "settings": {
-        "desktop_text_box_position": "flex-end"
-      },
+    "banner_products": {
+      "type": "banner-with-products",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_label_2": ""
-          }
+        "featured-product": {
+          "type": "featured-product"
         }
-      },
-      "block_order": ["heading", "button"]
+      }
     },
     "featured_products": {
       "type": "featured-collection",
@@ -50,7 +35,7 @@
     }
   },
   "order": [
-    "image_banner",
+    "banner_products",
     "featured_products",
     "image_text"
   ]
