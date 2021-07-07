@@ -1,0 +1,79 @@
+
+<div class="featured-collections-section side-pads">
+    <div class="container">
+        <div class="featured-collections">
+            {% for block in section.blocks %}
+            <div class="featured-collection2 collection-{{forloop.index}}">
+                <div class="featured-collection2__left-text">
+                    <div class="left-text__subtitle">
+                        {{ block.settings.collection-subtitle }}
+                    </div>
+                    <div class="left-text__title {% if forloop.index == 2 %}left-text__title--big{%endif%}">
+                        {{ block.settings.collection-title }}
+                    </div>
+                    <button class="left-text__btn">
+                        <a href="{{ block.settings.collection-btn-link }}">
+                        {{ block.settings.collection-btn-txt }}
+                        </a>
+                    </button>
+                </div>
+                <div class="featured-collection2__right-img">
+                    {{ block.settings.collection-img | img_url: 'master' | img_tag}}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>  
+{% schema %}
+{
+  "name": "Featured-collections",
+  "tag": "section",
+  "class": "spaced-section",
+  "max_blocks": 4,
+  "settings": [ 
+  ],
+  "blocks": [
+    {
+      "type": "feature-collection",
+      "name": "feature-collection",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Featured-collection"
+        },
+        {
+            "id": "collection-subtitle",
+            "type": "text",
+            "label": "Collection subtitle"
+        },   
+        {
+            "id": "collection-title",
+            "type": "text",
+            "label": "Collection title"
+        },          
+        {
+          "id": "collection-btn-link",
+          "type": "url",
+       	  "label": "Collecton button link"
+        },
+        {
+            "id": "collection-btn-txt",
+            "type": "text",
+            "label": "Button text"
+        },
+        {
+            "id": "collection-img",
+            "type": "image_picker",            
+            "label": "Collection img"
+        }
+      ]
+    }
+  ],  
+  "presets": [
+    {
+      "name": "Featured collections"
+    }
+  ]
+}
+{% endschema %}
