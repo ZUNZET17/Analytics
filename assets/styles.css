@@ -361,11 +361,70 @@ h3{
     right: -50px;
 }
 
+/* Features section styling */
+
+.features-section-wrapper{
+    margin-top: 50px;
+    background-color: white;
+}
+.features-section{
+    padding-top: 53px;
+    padding-bottom: 53px;
+}
+.features-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+    justify-items: center;
+}
+.feature-container{
+    width: max-content;
+}
+.features-container svg{
+    display: none;
+}
+.feature-card{
+    width: 275px;
+    height: 104px;
+    background-color: white;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+}
+.feature-card__img{
+    width: 86px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFCCB4;
+    border-radius: 12px;
+}
+.feature-card__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 0 14px;
+}
+.feature-card__title{
+    width: 130px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.feature-card__link{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #D14D41;
+}
+
 /* Media querys */
 @media screen and (min-width: 541px){
     .side-pads{
-        padding-right: 35px;
-        padding-left: 35px;
+        padding-right: 50px;
+        padding-left: 50px;
     }   
     .search-field{
         margin-top: 0;
@@ -400,6 +459,17 @@ h3{
     .product-card{
         justify-content: space-between;
         flex-direction: row;
+    } 
+
+    .features-container{
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        row-gap: 2em;
+        justify-content: space-between;
+    }   
+    .feature-card{
+        width: auto;
+        grid-template-columns: auto 1fr;
     }    
 }
 @media screen and (min-width: 768px){
@@ -467,6 +537,11 @@ h3{
     }    
     .category-card{
         width: 318px!important;
+    }  
+    
+    .feature-card{
+        width: auto;
+        grid-template-columns: 1fr 1fr;
     }    
 }
 @media screen and (min-width: 998px){
@@ -504,7 +579,21 @@ h3{
         height: 265px;
         width: 100%;
         padding: 0 10px 0 0;
-    } 
+    }
+    
+    .features-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }    
+    .features-container svg{
+        display: block;
+    }
+    .feature-card{
+        width: auto;
+        justify-content: space-between;
+        grid-template-columns: auto 1fr;
+    }    
 }
 @media screen and (min-width: 1148px){
     #banner-products{
