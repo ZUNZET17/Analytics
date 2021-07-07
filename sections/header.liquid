@@ -1,12 +1,9 @@
 <div class="header__first-row side-pads">
   <div class="header-container">
       <div class="brand-container">
-        <a class="brand" href="#">
+        <a class="brand" href="/">
           <div class="brand__logo">
-            <svg width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M54.7625 13.0592C49.3571 5.1733 40.2827 0 30 0C13.4315 0 0 13.4314 0 30C0 32.4105 0.2843 34.7545 0.821171 37.0005L16.0983 21.7233C17.5628 20.2589 19.9372 20.2589 21.4017 21.7233L33.75 34.0717L54.7625 13.0592Z" fill="#EF2A82"/>
-            <path d="M58.3281 20.1002L36.4017 42.0267C34.9372 43.4911 32.5628 43.4911 31.0983 42.0267L18.75 29.6783L3.80127 44.627C8.93324 53.7993 18.7425 60 30 60C46.5686 60 60 46.5686 60 30C60 26.531 59.4112 23.1996 58.3281 20.1002Z" fill="#EF2A82"/>
-            </svg> 
+            {{ section.settings.logo | img_url: 'medium' | img_tag }}
           </div>
           <div class="brand__company-name">
             <svg width="117" height="16" viewBox="0 0 119 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,13 +56,13 @@
         </div>   
         <div class="block">
           <div class='block__heading'>
-            <div class="user-icon icon">JT</div>
+            <div class="user-icon icon">{% if customer %}{{ customer.first_name | truncate: 2, ""}}{% else %}Us{% endif %}</div>
             <span class='text'>
-              <strong>JhonTa</strong>
+              <strong>{% if customer %}{{ customer.first_name }}{% else %}User{% endif %}</strong>
             </span>
           </div>
           <div class="block__subheading">
-            Ir a mi cuenta
+            <a href="/account/login">Ir a mi cuenta</a>
           </div>
         </div>
         <div class="divider">
@@ -110,7 +107,7 @@
       </ul>
     </div>
     <div class='authentication'>
-      <a href="" class="header__sign-up-btn">
+      <a href="{%if customer%}/account/logout{%else%}/account/login{%endif%}" class="header__sign-up-btn">
         <span >{%if customer%}Sign Out{%else%}Sign In{%endif%}</span>
       </a>   
     </div>
@@ -138,53 +135,10 @@ $(document).ready(function(){
       "label": "t:sections.header.settings.logo.label"
     },
     {
-      "type": "range",
-      "id": "logo_width",
-      "min": 50,
-      "max": 250,
-      "step": 10,
-      "default": 100,
-      "unit": "t:sections.header.settings.logo_width.unit",
-      "label": "t:sections.header.settings.logo_width.label"
-    },
-    {
-      "type": "select",
-      "id": "logo_position",
-      "options": [
-        {
-          "value": "middle-left",
-          "label": "t:sections.header.settings.logo_position.options__1.label"
-        },
-        {
-          "value": "top-left",
-          "label": "t:sections.header.settings.logo_position.options__2.label"
-        },
-        {
-          "value": "top-center",
-          "label": "t:sections.header.settings.logo_position.options__3.label"
-        }
-      ],
-      "default": "middle-left",
-      "label": "t:sections.header.settings.logo_position.label"
-    },
-    {
       "type": "link_list",
       "id": "menu",
       "default": "main-menu",
       "label": "t:sections.header.settings.menu.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_line_separator",
-      "default": true,
-      "label": "t:sections.header.settings.show_line_separator.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_sticky_header",
-      "default": true,
-      "label": "t:sections.header.settings.enable_sticky_header.label",
-      "info": "t:sections.header.settings.enable_sticky_header.info"
     }
   ]
 }

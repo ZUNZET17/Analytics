@@ -47,7 +47,7 @@
         "type": "font_picker",
         "id": "type_header_font",
         "default": "sans-serif",
-        "label": "Font",
+        "label": "Headers Font",
         "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
       {
@@ -58,7 +58,7 @@
         "type": "font_picker",
         "id": "type_body_font",
         "default": "sans-serif",
-        "label": "Font",
+        "label": "Body Font",
         "info": "t:settings_schema.typography.settings.type_body_font.info"
       }
     ]

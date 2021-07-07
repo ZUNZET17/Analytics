@@ -7,7 +7,21 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    {% style %}
+    {{ settings.type_body_font | font_face: font_display: 'swap' }}
+    {{ settings.type_header_font | font_face: font_display: 'swap' }}
+    :root{
+        --main-color: {{settings.main_color}};
+        --secondary-color: {{settings.secondary_color}};
+        --third-color: {{settings.third_color}};
 
+        --font-header: {{settings.type_header_font.family}};
+        --font-body: {{settings.type_body_font.family}};
+    }  
+    body{
+      font-family: var(--font-body);
+    }    
+  {% endstyle %}  
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="{{ 'slick-theme.css' | asset_url }}"/>
     
@@ -26,16 +40,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
-    <style>
-      :root{
-          --main-color: {{settings.main_color}};
-          --secondary-color: {{settings.secondary_color}};
-          --third-color: {{settings.third_color}};
-
-          --font-header: {{settings.type_header_font.family}};
-          --font-body: {{settings.type_body_font.family}};
-      }      
-    </style>    
+   
     {%- unless settings.type_body_font.system? -%}
     <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
