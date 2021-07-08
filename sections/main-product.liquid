@@ -3,10 +3,10 @@
 <link rel="stylesheet" href="{{ 'main-product.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'main-product.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="container">
+<div class="main-product-container">
   <div class="breadcrumb-nav">Pinturas > Pinturas de exterior > GCB43562CR-18</div>
   <div class="main-product">
-    <div class="product-carousel">
+    <div class="product-carousel card--elevation">
       <div class="carousel-container">
         <div class="main-carousel">
           {% for image in product.images %}
@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <div class="buying-card">
+    <div class="buying-card card--elevation card--elevation-raised">
       <div class="product-buy-card__brand-sku">GENAIRE | GEN542ULCR-18</div>
       <div class="product-buy-card__social-share" style="width: max-content">
         <ul class="footer__list-social list-unstyled list-social" role="list">
@@ -62,40 +62,43 @@
         <tag class="vendor">GENARE</tag>
         <tag class="main-collectior">Aires acondicionados</tag>
       </div>
-      <div class="product-info__details">
+      <div class="product-info__details card--elevation">
         {{ section.settings.product-details }}
       </div>
     </div>
     <div class="product-upsell">
-      <div class="product-upsell__item">
-        <img class="product-upsell__item__img" src="" style="background: black; width: 114px; height: 110px" alt="">
-        <div class="product-upsell__item__info">
-          <span>COLOR KOTE</span>
-          <span>Juego de bandeja plástica para pintar</span>
-          <span>$99.99</span>
-          <button>Agregar</button>
+      <h2 class="product-upsell__title">Mejora tu compra</h2>
+      <div class="product-upsell__items card--elevation">
+        <div class="upsell-item">
+          <img class="product-upsell__item__img" src="" style="background: black; width: 114px; height: 110px" alt="">
+          <div class="product-upsell__item__info">
+            <span>COLOR KOTE</span>
+            <span>Juego de bandeja plástica para pintar</span>
+            <span>$99.99</span>
+            <button>Agregar</button>
+          </div>
         </div>
-      </div>
-      <div class="product-upsell__item">
-        <img class="product-upsell__item__img" src="" style="background: black; width: 114px; height: 110px" alt="">
-        <div class="product-upsell__item__info">
-          <span>COLOR KOTE</span>
-          <span>Juego de bandeja plástica para pintar</span>
-          <span>$99.99</span>
-          <button>Agregar</button>
+        <div class="upsell-item">
+          <img class="product-upsell__item__img" src="" style="background: black; width: 114px; height: 110px" alt="">
+          <div class="product-upsell__item__info">
+            <span>COLOR KOTE</span>
+            <span>Juego de bandeja plástica para pintar</span>
+            <span>$99.99</span>
+            <button>Agregar</button>
+          </div>
         </div>
-      </div>
-      <div class="product-upsell__item">
-        <img class="product-upsell__item__img" src="" style="background: black; width: 114px; height: 110px" alt="">
-        <div class="product-upsell__item__info">
-          <span>COLOR KOTE</span>
-          <span>Juego de bandeja plástica para pintar</span>
-          <span>$99.99</span>
-          <button>Agregar</button>
+        <div class="upsell-item">
+          <img class="product-upsell__item__img" src="" style="background: black; width: 114px; height: 110px" alt="">
+          <div class="product-upsell__item__info">
+            <span>COLOR KOTE</span>
+            <span>Juego de bandeja plástica para pintar</span>
+            <span>$99.99</span>
+            <button>Agregar</button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="product-specs">
+    <div class="product-specs card--elevation">
       <h2 class="product-specs__title">ESPECIFICACIONES</h2>
       <hr>
       <div class="product-specs__item">
