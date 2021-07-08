@@ -151,8 +151,9 @@
           "settings": {
             "collection-subtitle": "Nuevos productos",
             "collection-title": "Pinturas para ti",
-            "collection-btn-link": "",
-            "collection-btn-txt": ""
+            "collection-btn-link": "#",
+            "collection-btn-txt": "Ir a pinturas",
+            "collection-img": "shopify:\/\/shop_images\/image-removebg-preview_6_1.png"
           }
         }
       },
