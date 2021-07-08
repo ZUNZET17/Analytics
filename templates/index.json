@@ -72,13 +72,49 @@
             "category-img": "shopify:\/\/shop_images\/Rectangle_651-3.png",
             "category-title": "Lámparas"
           }
+        },
+        "f222accf-0437-4351-bad8-dd8340cacb38": {
+          "type": "category-card",
+          "settings": {
+            "category-link": "#",
+            "category-img": "shopify:\/\/shop_images\/business-pug-working-on-laptop.jpg",
+            "category-title": "Doggos"
+          }
+        },
+        "ed092537-8c87-454b-8ff7-af7fe833dda0": {
+          "type": "category-card",
+          "settings": {
+            "category-link": "#",
+            "category-img": "shopify:\/\/shop_images\/man-adjusts-his-shirt-cuffs-below-watch.jpg",
+            "category-title": "Watches"
+          }
+        },
+        "5256d97e-5f44-421c-9dc2-62d4ecfdf6c6": {
+          "type": "category-card",
+          "settings": {
+            "category-link": "#",
+            "category-img": "shopify:\/\/shop_images\/young-woman-in-sunglasses-with-rings.jpg",
+            "category-title": "Glasses"
+          }
+        },
+        "ae032969-0686-4817-a923-1955285b715a": {
+          "type": "category-card",
+          "settings": {
+            "category-link": "#",
+            "category-img": "shopify:\/\/shop_images\/gift-package-in-hand.jpg",
+            "category-title": "Gifts"
+          }
         }
       },
       "block_order": [
         "2b06b7b5-e142-4d71-8cb1-05983351dc91",
         "78f1651d-111b-4c7a-9eef-2c175c05ee11",
         "92d77ad2-a6d1-45bb-9be2-2df802be9919",
-        "0b05cc9a-d40e-49d2-b93b-c8ceb1730061"
+        "0b05cc9a-d40e-49d2-b93b-c8ceb1730061",
+        "f222accf-0437-4351-bad8-dd8340cacb38",
+        "ed092537-8c87-454b-8ff7-af7fe833dda0",
+        "5256d97e-5f44-421c-9dc2-62d4ecfdf6c6",
+        "ae032969-0686-4817-a923-1955285b715a"
       ],
       "settings": {
         "section-title": "Categorías para ti"
