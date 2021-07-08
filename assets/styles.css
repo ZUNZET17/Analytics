@@ -53,6 +53,18 @@ h3{
 .shopify-section{
     overflow: hidden;
 }
+.nav-btn{
+    position: absolute;
+    width: 43px;
+    height: 45px;
+    background: white!important;
+    border: 1px solid #363535;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transform: translate(0, -50%);
+    top: 50%;
+}
+
 /* header styling */
 .header{
     color:white;
@@ -209,6 +221,10 @@ h3{
     color: #8794BA;
     background: none;
     border: 1px solid #465B95;
+    transition: all 0.3s ease;
+}
+.header__sign-up-btn:hover{
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Banner with products section styling */
@@ -227,24 +243,13 @@ h3{
     filter: drop-shadow(0px 4px 12px rgba(54, 53, 53, 0.15));    
 }
 /* Slick slider customization */
-.slick-prev, .slick-next{
-    width: 43px;
-    height: 45px;
-    background: white!important;
-    border: 1px solid #363535;
-    box-sizing: border-box;
-    border-radius: 50%;
-}
-.slick-next{
+.slider-next{
     right: -21px;
 }
-.slick-prev{
+.slider-prev{
     left: -21px;
 }
-.slick-prev:before, .slick-next:before{
-    display: none;
-}
-.slick-next:hover, .slick-prev:hover{
+.nav-btn:hover{
     background: lightgray!important;
 }
 /* slick slider customization end */
@@ -343,22 +348,11 @@ h3{
     padding: 8px 21px 8px 12px;
     height: 52px;
 }
-.categories-prev, .categories-next{
-    position: absolute;
-    width: 43px;
-    height: 45px;
-    background: white!important;
-    border: 1px solid #363535;
-    box-sizing: border-box;
-    border-radius: 50%;
-    transform: translate(0, -50%);
-    top: 50%;
-}
 .categories-prev{
-    left: -50px;
+    left: -25px;
 }
 .categories-next{
-    right: -50px;
+    right: -25px;
 }
 
 /* Features section styling */
@@ -479,6 +473,10 @@ h3{
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0px 4px 12px rgba(209, 77, 65, 0.1);
     border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.left-text__btn:hover{
+    background: rgba(255, 255, 255, 0.5);
 }
 .featured-collection2__right-img{
     height: 100%;
@@ -521,6 +519,14 @@ h3{
 .footer__menu{
     height: auto!important;
     padding: 1.3rem;
+}
+.footer__list-social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.list-social__link{
+    padding: 1.3rem!important;
 }
 .list-social__link svg{
     color: #8794BA;
@@ -708,6 +714,13 @@ h3{
         width: 100%;
         padding: 0 10px 0 0;
     }
+
+    .categories-prev{
+        left: -50px;
+    }
+    .categories-next{
+        right: -50px;
+    }
     
     .features-container{
         display: flex;
@@ -752,7 +765,13 @@ h3{
         border-top: 1px solid #2A407C;
         width: 100%;
         height: 94px;
-    }    
+    }  
+    .footer .brand-container{
+        padding-left: 0rem;
+    }  
+    .list-social__link{
+        padding: 1.3rem 0rem 1.3rem 2.6rem!important;
+    }        
 }
 @media screen and (min-width: 1148px){
     #banner-products{
