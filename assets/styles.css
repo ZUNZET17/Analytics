@@ -55,6 +55,7 @@ h3{
 }
 .nav-btn{
     position: absolute;
+    z-index: 1000;
     width: 43px;
     height: 45px;
     background: white!important;
