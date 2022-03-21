@@ -1,2 +1,2 @@
-# Store cutomizationi
+# Store cutomization
 Analytics store
